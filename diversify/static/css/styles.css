@@ -1,0 +1,20 @@
+.home-title{
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+
+.predict-btn{
+    color: blue;
+    font-family: Helvetica;
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid blue;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    
+}
