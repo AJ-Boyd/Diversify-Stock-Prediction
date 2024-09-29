@@ -7,7 +7,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 
 # mongodb stuff
-uri = "Enter your uri here"
+uri = "mongodb+srv://diversify:ILoveMongoDB@cluster0.2vecs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 client = MongoClient(uri)
 db = client['test_stock']
 collection = db['stocks']

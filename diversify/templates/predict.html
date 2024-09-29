@@ -9,11 +9,11 @@
     <div class="row">
         <div class="col-8">
 
-            <form action="#" method="post">
+            <form action="/predict" method="post" >
             <label class="stock-menu" for="stock-choice"> Choose a Stock:</label>
             <input list="stock-option" id="stock-choice" name="stock-choice" />
 
-            <datalist id="stock-option">
+            <datalist id="stock-option" >
 
                 {% for i in range(names|length)  %}
                 <option value="{{tickers[i]}}">{{names[i]}}</option>
@@ -66,11 +66,13 @@
 
                     <div id="container"></div>
                     <script>
+              
                     anychart.onDocumentReady(function () {
-                       
+                          var chartTitle = "{{ stock }}";
+                          console.log(chartTitle)
                           // for alphabet (google)
                           anychart.data.loadCsvFile(
-                            "../static/csv/AANPL.csv",
+                            "../static/csv/prediction.csv",
                             function (googleData) {
                               
                               // create data tables:
@@ -85,7 +87,7 @@
                               let googleSeries = Plot.area(
                                 googleDataTable.mapAs({ value: 4 })
                               );
-                              googleSeries.name("GOOG");
+                              googleSeries.name(chartTitle);
                               
                               // set the stock chart title
                               chart.title("Stock Chart");
@@ -99,6 +101,7 @@
                             }
                           );
                         });
+
                     </script>
                 </div>
             </div>
@@ -115,17 +118,17 @@
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">Microsoft(MFST)</h5>
+                      <h5 class="card-title">Microsoft(MSFT)</h5>
                       <p class="card-text">See A Prediction of Microsoft's Stock This Week.</p>
 
                       <form action="/predict" method="POST" onsubmit="return addString()">
-                            <input type="hidden" id="MFST-str" name="stock-choice" value="MFST">
+                            <input type="hidden" id="MSFT-str" name="stock-choice" value="MSFT">
                             <button type="submit">Predict This Stock</button>
                       </form>
 
                       <script>
                         function addString(){
-                            document.getElementById("stock-choice").value = "MFST";
+                            document.getElementById("stock-choice").value = "MSFT";
                             return true;
                         }
                     </script>
