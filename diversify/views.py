@@ -6,6 +6,7 @@ file: views.py
 """
 
 from flask import Blueprint, render_template, request, jsonify, flash, redirect, url_for
+from pymongo import MongoClient
 views = Blueprint("views", __name__)
 
 @views.route("/", methods=["GET", "POST"])
@@ -15,7 +16,8 @@ def home():
 @views.route("/predict", methods=["GET", "POST"])
 def predict():
     if request.method == "POST":
-        stck = request.form["stock-choice"]
+        ticker = request.form["stock-choice"]
+        print("help:", stck)
         
         return render_template("predict.html", names=["Microsoft", "Apple", "Google", "3M"], tickers=["MFST","AAPL","GOOGL","MMM"], stock=stck)
     else:
