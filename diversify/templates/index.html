@@ -7,34 +7,109 @@ Diversify -- Financial Literacy for Everyone
 {% block content %}
 
 <div class="main-image">
-    <div class="banner-container">
+    <div class="banner-container merriweather-black">
         <h1><span>Welcome to Diversify</span></p>
-        <a class="main-btn" href="predict">
-            <button class="predict-btn" >Predict Stock</button>
+        <a class="main-btn" href="/predict">
+            <button class="travel-btn merriweather-bold" >Start Predicting</button>
         </a>
     </div>
 </div>
 
-<div class="container text-center">
+<div class="meet-us">
 
-    <div class="row">
-        <div>
-            <p> Meet the Team </p>
+    <h1 class="about-title merriweather-bold"> Meet the Team </h1>
 
-            <a href="about">
-                <button>Who Are We?</button>
-            </a>
+    <div class="container text-center">
+        <div class="row row-cols-2">
+            <div class="col" id="Aj">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../static/media/headshots/A_Boyd.jpg" class="img-fluid rounded-start" alt="Picure of AJ Boyd">
+                        </div>
+                            
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h1 class="card-title name-tag merriweather-bold">
+                                    AJ Boyd
+                                </h1>
+                                <h2 class="mem-title merriweather-light">Full-Stack Developer</h2>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+            <div class="col" id="Jalen">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="../static/media/headshots/J_Boyd.jpg" class="img-fluid rounded-start" alt="Picure of Jalen Boyd">
+                            </div>
+                      
+                      <div class="col-md-8">
+                            <div class="card-body">
+                                <h1 class="card-title name-tag merriweather-bold">
+                                    Jalen Boyd
+                                </h1>
+                                <h2 class="mem-title merriweather-light">Designer</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col" id="Josh">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../static/media/headshots/J_Culp.jpg" class="img-fluid rounded-start" alt="Picure of Joshua Culp">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h1 class="card-title name-tag merriweather-bold">
+                                    Joshua Culp
+                                </h1>
+                                <h2 class="mem-title merriweather-light">Full-Stack Developer</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+
+            <div class="col" id="Lucas">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../static/media/headshots/L_Pierce.jpg" class="img-fluid rounded-start" alt="Picure of Lucas Pierce">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h1 class="card-title name-tag merriweather-bold">
+                                    Lucas Pierce
+                                </h1>
+                                <h2 class="mem-title merriweather-light">Back-End Developer</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
         </div>
     </div>
 
-    <div class="row">
-        <div>
-            <p> Increase Your Financial Literacy </p>
-            <a href="educate">
-                <button>Learn more</button>
-            </a>
-        </div>
-    </div>
+    <a href="about">
+        <button class="travel-btn">Who Are We?</button>
+    </a>
+    
+</div>
 
+<div class="learn-more">
+    <h1 class="about-title merriweather-bold"> Get Educated </h1>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dW77CWoUW_Q?si=hBqjJsqzRlN_v4Cp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <a href="educate">
+        <button>Learn More</button>
+    </a>
 </div>
 {% endblock %}
