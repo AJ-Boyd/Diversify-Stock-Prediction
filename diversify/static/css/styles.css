@@ -263,7 +263,6 @@ html, body{
 }
 
 .bio{
-    border: 1px solid black;
     height: 300px;
     width: 250px;
     position: relative;
@@ -306,12 +305,9 @@ footer{
 
 .aboot{
     height: 100% !important;
-    border: 1px solid black;
-    
 }
 .about-img{
     height: 100%;
-    border: 1px solid black;
     background-image: url('../media/guiding\ on\ tablet.png');
     background-size: cover;
     height: 400px;
@@ -323,4 +319,19 @@ footer{
     background-color: #a1c574ef;
     padding: 2%;
     line-height: 2;
+}
+ul{
+    list-style-type: none;
+}
+ul h4{
+    color: #393838;
+}
+
+#abt1{
+    background-image: url('../media/stocks\ screen.jpg');
+    background-size: cover;
+}
+#abt3{
+    background-image: url('../media/stock\ trading.jpg');
+    background-size: cover;
 }
