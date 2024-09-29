@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+
+{% block title %}Stock Predictor{% endblock %}
+
+{% block content %}
+<p class="home-title"> You wanna predict so bad </p>
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col-8">
+
+            <form action="#" method="post">
+            <label class="stock-menu" for="stock-choice"> Choose a Stock:</label>
+            <input list="stock-option" id="stock-choice" name="stock-choice" />
+
+            <datalist id="stock-option">
+
+                {% for i in range(names|length)  %}
+                <option value="{{tickers[i]}}">{{names[i]}}</option>
+                {% endfor %}
+
+            </datalist>
+
+            <input type="submit" value="Submit">
+
+            </form>
+        
+            <div class="embed-responsive embed-responsive-4by3">
+                <div id="anychart-embed-Vd0bMWpS" class="anychart-embed anychart-embed-Vd0bMWpS">
+                    <script src="https://cdn.anychart.com/releases/8.11.1/js/anychart-core.min.js"></script>
+                    <script src="https://cdn.anychart.com/releases/8.11.1/js/anychart-stock.min.js"></script>
+                    <script src="https://cdn.anychart.com/releases/8.11.1/js/anychart-data-adapter.min.js"></script>
+                    <script src="https://cdn.anychart.com/releases/8.11.1/js/anychart-ui.min.js"></script>
+                    <script src="https://cdn.anychart.com/releases/8.11.1/js/anychart-exports.min.js"></script>
+                    <div id="ac_style_Vd0bMWpS" style="display:none;">
+                        html,
+                        body,
+                        #container {
+                            width: 100%;
+                            height: 100%;
+                            margin: 0;
+                            padding: 0;
+                        }
+                    </div>
+
+                    <script>(function(){
+                    function ac_add_to_head(el){
+                        var head = document.getElementsByTagName('head')[0];
+                        head.insertBefore(el,head.firstChild);
+                    }
+                    function ac_add_link(url){
+                        var el = document.createElement('link');
+                        el.rel='stylesheet';el.type='text/css';el.media='all';el.href=url;
+                        ac_add_to_head(el);
+                    }
+                    function ac_add_style(css){
+                    var ac_style = document.createElement('style');
+                    if (ac_style.styleSheet) ac_style.styleSheet.cssText = css;
+                    else ac_style.appendChild(document.createTextNode(css));
+                    ac_add_to_head(ac_style);
+                    }
+                    ac_add_link('https://cdn.anychart.com/releases/8.11.1/css/anychart-ui.min.css');
+                    ac_add_style(document.getElementById("ac_style_Vd0bMWpS").innerHTML);
+                    ac_add_style(".anychart-embed-Vd0bMWpS{width:600px;height:450px;}");
+                    })();</script>
+
+                    <div id="container"></div>
+                    <script>
+                    anychart.onDocumentReady(function () {
+                       
+                          // for alphabet (google)
+                          anychart.data.loadCsvFile(
+                            "../static/csv/AANPL.csv",
+                            function (googleData) {
+                              
+                              // create data tables:
+                              let googleDataTable = anychart.data.table();
+                              googleDataTable.addData(googleData);
+                
+                              // create a stock chart
+                              let chart = anychart.stock();
+                
+                              // create three stock plots with area series:
+                              let Plot = chart.plot(0);
+                              let googleSeries = Plot.area(
+                                googleDataTable.mapAs({ value: 4 })
+                              );
+                              googleSeries.name("GOOG");
+                              
+                              // set the stock chart title
+                              chart.title("Stock Chart");
+                
+                              // set the stock chart container id
+                              chart.container("container");
+                              
+                              // initiate the stock chart drawing
+                              chart.draw();
+                              
+                            }
+                          );
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-sm-4">
+
+            
+            
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="../static/media/Microsoft_logo.png" class="img-fluid rounded-start" alt="Microsoft Logo">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Microsoft(MFST)</h5>
+                      <p class="card-text">See A Prediction of Microsoft's Stock This Week.</p>
+
+                      <form action="#" method="POST" onsubmit="return addString()">
+                            <input type="hidden" id="MFST-str" name="stock-choice" value="MFST">
+                            <button type="submit">Predict This Stock</button>
+                      </form>
+
+                      <script>
+                        function addString(){
+                            document.getElementById("stock-choice").value = "MFST";
+                            return true;
+                        }
+                    </script>
+
+                    </div>
+                  </div>
+                </div>
+                
+            </div>
+
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="../static/media/Apple_logo.png" class="img-fluid rounded-start" alt="Microsoft Logo">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Apple(AAPL)</h5>
+                      <p class="card-text">See A Prediction of AAPL's Stock This Week.</p>
+
+                      <form action="#" method="POST" onsubmit="return addString()">
+                            <input type="hidden" id="AAPL-str" name="stock-choice" value="AAPL">
+                            <button type="submit">Predict This Stock</button>
+                      </form>
+
+                      <script>
+                        function addString(){
+                            document.getElementById("stock-choice").value = "AAPL";
+                            return true;
+                        }
+                    </script>
+
+                    </div>
+                  </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,12 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diversify -- Financial Literacy for Everyone</title>
-</head>
-<body>
-    <h1> Hello, world! </h1>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}
+Diversify -- Financial Literacy for Everyone
+{% endblock %}
+
+{% block content %}
+
+<div class="main-image">
+    <div class="banner-container">
+        <h1><span>Welcome to Diversify</span></p>
+        <a class="main-btn" href="predict">
+            <button class="predict-btn" >Predict Stock</button>
+        </a>
+    </div>
+</div>
+
+<div class="container text-center">
+
+    <div class="row">
+        <div>
+            <p> Meet the Team </p>
+
+            <a href="about">
+                <button>Who Are We?</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div>
+            <p> Increase Your Financial Literacy </p>
+            <a href="educate">
+                <button>Learn more</button>
+            </a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
