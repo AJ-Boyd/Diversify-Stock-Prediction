@@ -1,3 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+@font-face{
+    font-family: 'Futura-Md';
+    src: url('../ttf/futura-mediumbt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.merriweather-light {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.merriweather-regular {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.merriweather-bold {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.merriweather-black {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.merriweather-light-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.merriweather-regular-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.merriweather-bold-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.merriweather-black-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+}  
+
 .home-title{
     font-family: Futura;
     font-weight: bold;
@@ -6,12 +64,70 @@
     text-align: center;
 }
 
-.predict-btn{
+.search-container{
+    display: flex;
+    margin-left: 50px;
+}
+
+.search-container input[type="list"]{
+    padding: 10px;
+    border: 2px solid #F5F2AD;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 250px;
+}
+
+.search-container button{
+    padding: 2px 20px;
+    border: 2px solid #F5F2AD;
+    border-left: none;
+    background-color: #F5F2AD;
+    color: #747474;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.search-container button:hover {
+    opacity: 0.7;
+}
+
+
+.green-rectangle{
+    width: 249px;
+    height: 5px;
+    background-color: #A1C574;
+    border: 2px solid #A1C574;
+    margin-left: 75px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1.predict-title{
+    margin-bottom: 56px;
+    font-style: normal;
+    font-size: 60px;
+    color: black;
+    text-align: left;
+    padding-left: 42px;
+}
+
+.custom-card{
+    width: 200px;
+    height: 151px;
+}
+
+.custom-card img{
+    max-height: 151px;
+    object-fit: cover;
+}
+
+.travel-btn{
     color: #313131;
     padding: 10px 24px;
-    background: #f1f1f1;
+    background: #F5F2AD;
     text-decoration: none;
-    border-radius: 12px;
+    border-radius: 5px;
     font-size: 18px;
     transition: .6s
 }
@@ -21,7 +137,10 @@
 }
 
 .main.container{
-    margin-top: 56px;
+    margin-top: 0px;
+    max-width: 100% !important;
+    margin-right: 0% !important;
+    margin-left: 0% !important;
 }
 
 .navbar{
@@ -31,12 +150,15 @@
     --bs-navbar-color: white !important;
     --bs-navbar-active-color: rgba(95, 255, 109, 0.88) !important;
     --bs-navbar-hover-color: rgba(200, 252, 204, 0.764) !important;
+    font-family: 'Futura-Md';
+    font-size: 22px;
 }
 
 .navbar-brand{
-    font-family: Helvetica;
-    font-weight: bold;
-    font-size: 20px;
+    font-family: 'Futura-Md';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px !important;
     color: white;
 }
 
@@ -44,15 +166,15 @@ html, body{
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: Helvetica;
-    background: #1d9802fb;
+    background: #E8E8E8 !important;
 }
 
 .main-image{
     position: relative;
-    background: url(../media/stock-numbers-image.jpg) no-repeat center;
+    background: url(../media/main-banner.jpg) no-repeat center;
+    background-position: 50% 30%;
     background-size: cover;
-    height: 500px;
+    height: 600px;
     width: 100%;
     overflow: hidden;
 }
@@ -70,23 +192,40 @@ html, body{
 
 .banner-container h1{
     margin: 0;
-    font-size: 70px;
+    font-size:100px;
+    width: 1071px;
+    height: 320px;
 }
 
 .banner-container h1 span{
-    border: 6px solid white;
     padding: 6px 14px;
     display: inline-block;
-
-}
-
-.button{
-
 }
 
 .stock-menu{
-    font-family: Helvetica;
-    font-weight: bold;
     font-size: 18px;
     border-width: 1px;
+}
+
+.main-btn{
+    margin-top: 10px;
+}
+
+.meet-us{
+    margin-top: 135px;
+    text-align: center;
+}
+
+.name-tag{
+    text-align: left;
+    font-size: 64px;
+}
+
+.mem-title{
+    text-align: left;
+    font-size: 48px;
+}
+
+.about-title{
+    margin-bottom: 45px;
 }
