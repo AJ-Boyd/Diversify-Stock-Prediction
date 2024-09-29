@@ -1,20 +1,92 @@
 .home-title{
-    font-family: Helvetica;
+    font-family: Futura;
     font-weight: bold;
     font-size: 30px;
-    color: black;
+    color: white;
     text-align: center;
 }
 
 .predict-btn{
-    color: blue;
+    color: #313131;
+    padding: 10px 24px;
+    background: #f1f1f1;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 18px;
+    transition: .6s
+}
+
+.predict-btn:hover{
+    opacity: .6;
+}
+
+.main.container{
+    margin-top: 56px;
+}
+
+.navbar{
+    background-color: #377600fb;
+    --bs-navbar-brand-color: white !important;
+    --bs-navbar-brand-hover-color: white !important;
+    --bs-navbar-color: white !important;
+    --bs-navbar-active-color: rgba(95, 255, 109, 0.88) !important;
+    --bs-navbar-hover-color: rgba(200, 252, 204, 0.764) !important;
+}
+
+.navbar-brand{
     font-family: Helvetica;
     font-weight: bold;
-    background-color: white;
-    border: 2px solid blue;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    background: #1d9802fb;
+}
+
+.main-image{
+    position: relative;
+    background: url(../media/stock-numbers-image.jpg) no-repeat center;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.banner-container h1{
+    margin: 0;
+    font-size: 70px;
+}
+
+.banner-container h1 span{
+    border: 6px solid white;
+    padding: 6px 14px;
+    display: inline-block;
+
+}
+
+.button{
+
+}
+
+.stock-menu{
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 18px;
+    border-width: 1px;
 }

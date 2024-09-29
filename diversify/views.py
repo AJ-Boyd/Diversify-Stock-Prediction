@@ -14,7 +14,12 @@ def home():
 
 @views.route("/predict", methods=["GET", "POST"])
 def predict():
-    return render_template("predict.html")
+    if request.method == "POST":
+        stck = request.form["stock-choice"]
+        
+        return render_template("predict.html", names=["Microsoft", "Apple", "Google", "3M"], tickers=["MFST","AAPL","GOOGL","MMM"], stock=stck)
+    else:
+        return render_template("predict.html", names=["Microsoft", "Apple", "Google", "3M"], tickers=["MFST","AAPL","GOOGL","MMM"])
 
 @views.route("/about", methods=["GET", "POST"])
 def about():

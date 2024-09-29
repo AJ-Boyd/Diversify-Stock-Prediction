@@ -5,25 +5,36 @@ Diversify -- Financial Literacy for Everyone
 {% endblock %}
 
 {% block content %}
-<div>
-    <p> Welcome to Diversify</p>
-    <a href="predict">
-        <button>Predict Stock</button>
-    </a>
+
+<div class="main-image">
+    <div class="banner-container">
+        <h1><span>Welcome to Diversify</span></p>
+        <a class="main-btn" href="predict">
+            <button class="predict-btn" >Predict Stock</button>
+        </a>
+    </div>
 </div>
 
-<div>
-    <p> Meet the Team </p>
-    <a href="about">
-        <button>Who Are We?</button>
-    </a>
-</div>
+<div class="container text-center">
 
-<div>
-    <p> Increase Your Financial Literacy </p>
-    <a href="educate">
-        <button>Learn more</button>
-    </a>
-</div>
+    <div class="row">
+        <div>
+            <p> Meet the Team </p>
 
+            <a href="about">
+                <button>Who Are We?</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div>
+            <p> Increase Your Financial Literacy </p>
+            <a href="educate">
+                <button>Learn more</button>
+            </a>
+        </div>
+    </div>
+
+</div>
 {% endblock %}
