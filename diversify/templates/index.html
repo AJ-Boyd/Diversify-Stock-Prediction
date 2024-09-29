@@ -7,34 +7,99 @@ Diversify -- Financial Literacy for Everyone
 {% block content %}
 
 <div class="main-image">
-    <div class="banner-container">
-        <h1><span>Welcome to Diversify</span></p>
-        <a class="main-btn" href="predict">
-            <button class="predict-btn" >Predict Stock</button>
+    <div class="banner-container merriweather-black">
+        <h1><span>Welcome to <u>Diversify</u></span></p>
+        <a class="main-btn" href="/predict">
+            <button class="travel-btn merriweather-bold" >Start Predicting</button>
         </a>
     </div>
 </div>
 
-<div class="container text-center">
+<div>
+    <h1 class="landing-header merriweather-bold">Who Are We?</h1>
+    <div class="row about-row">
+        <div class="col-lg-6">
+            <p class="landing-body">
+                <b><i>Diversify Stock Prediction</i></b> is an initiative to put the power of financial literacy into the hands of low-income or underrepresnted groups.
+                As many marginalized communities are not given the resources or education on making wise investments, our app is designed to address that disparity.
+                This website is full of educational resources to give anyone a basic understading on the stock market, investments, and equity. We also utilize cutting-edge
+                machine learning technology to help you comprehend current trends on the NYSE.
+            </p>
+        <button class="travel-btn"><a href="about">Learn more about us</a></button>
 
-    <div class="row">
-        <div>
-            <p> Meet the Team </p>
-
-            <a href="about">
-                <button>Who Are We?</button>
-            </a>
         </div>
+        
+        <div class="col-lg-1"></div>
+        <div id="aside-img" class="col-lg-5"></div>
+        
     </div>
-
-    <div class="row">
-        <div>
-            <p> Increase Your Financial Literacy </p>
-            <a href="educate">
-                <button>Learn more</button>
-            </a>
-        </div>
-    </div>
-
 </div>
+
+<div>
+    <h1 class="about-title landing-header merriweather-bold"> Get Educated </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <iframe width="500" height="315" src="https://www.youtube.com/embed/dW77CWoUW_Q?si=hBqjJsqzRlN_v4Cp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-1">
+            
+            </div>
+            <div class="col-lg-6">
+            <p class="landing-body">Education is the only way toward financial freedom. Click the video to learn more about building credit to build your equity.</p>
+            <a href="/educate">
+                <button>Learn More</button>
+            </a>
+            </div>
+        </div>
+    </div>  
+</div>
+
+<div class="meet-us">
+    <h1 class="about-title merriweather-bold"> Meet the Team </h1>
+    <div class="container text-center meet-content">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="bio">
+                  <div id="bio1" class="bio-content">
+                    <h3>AJ Boyd</h3>
+                    <h5>Data Engineering</h5>
+                    <img id="headshot-1" src='../static/media/headshots/A_Boyd.jpg'></img>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="bio">
+                  <div id="bio2" class="bio-content">
+                    <h3>Joshua Culp</h3>
+                    <h5>Frontend Dev</h5>
+                    <img id="headshot-2" src='../static/media/headshots/J_Culp.jpg'></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-md-3">
+                <div class="bio">
+                  <div id="bio3" class="bio-content">
+                    <h3>Jalen Boyd</h3>
+                    <h5>Media & Design</h5>
+                    <img id="headshot-3" src='../static/media/headshots/J_Boyd.jpg'></img>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="bio">
+                  <div id="bio4" class="bio-content">
+                    <h3>Lucas Pierce</h3>
+                    <h5>Backend Dev</h5>
+                    <img id="headshot-4" src='../static/media/headshots/L_Pierce.jpg'></img>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+
 {% endblock %}
