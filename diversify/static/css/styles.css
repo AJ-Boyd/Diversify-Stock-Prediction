@@ -133,7 +133,10 @@ h1.predict-title{
     text-decoration: none;
     border-radius: 5px;
     font-size: 18px;
-    transition: .6s
+    transition: .3s
+}
+.travel-btn:hover{
+    background: #85b44b;
 }
 
 .predict-btn:hover{
@@ -216,7 +219,8 @@ html, body{
 }
 
 .main-btn{
-    margin-top: 10px;
+   position: relative;
+   bottom: 100px;
 }
 
 .meet-us{
@@ -295,7 +299,12 @@ html, body{
     display: flex;
     justify-content: center;
   }
-
+.header{
+    margin-top: 5%;
+}
+.header h2{
+    font-size: 50px;
+}
 footer{
     margin-top: 5%;
     background-color: #377600fb;
