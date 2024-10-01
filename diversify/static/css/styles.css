@@ -308,17 +308,19 @@ footer{
 }
 .about-img{
     height: 100%;
-    background-image: url('../media/guiding\ on\ tablet.png');
+    background-image: url('../media/businesswoman.jpg');
     background-size: cover;
     height: 400px;
     width: 200px;
     
 }
 .mission-body{
-    margin-left: -50px;
+    position: relative;
+    margin-right: -50px;
     background-color: #a1c574ef;
     padding: 2%;
-    line-height: 2;
+    line-height: 1.75;
+    z-index: 3;
 }
 ul{
     list-style-type: none;
